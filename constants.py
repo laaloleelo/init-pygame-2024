@@ -15,3 +15,5 @@ PIPE_GAP = 500                  # Bigger number -> Bigger gap (default = 500, no
 PIPE_VELOCITY = 5               # Bigger number -> Faster moving pipes (default = 5)
 DISTANCE_BETWEEN_PIPES = 300    # Bigger number -> More pipes (default = 300)
 TIME_BEFORE_FIRST_PIPE = 750    # Bigger number -> More time to wait (default = 750)
+GRAVITY = 1.2
+BIRD_JUMP = 15

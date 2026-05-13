@@ -132,9 +132,14 @@ def main():
                 # If yes, add +1 to the score.
                 # Don't forget to update the pipe's has_been_passed value to True!
                 # You can try to play a point sound here as well.
+                if not pipe.has_been_passed and bird.x > pipe.x + 25:
+                    pipe.has_been_passed = True
+                    score += 1
 
                 # TODO: Play a sound!
                 # Play the point sound here.
+                hurt_sound.play()
+                point_sound.play()
 
                 # Removes the pipe when it's off screen
                 if pipe.off_screen():
@@ -147,7 +152,9 @@ def main():
                     pipes.append(Pipe())
 
                 # TODO: Generate new pipes
-                
+                if pipes[-1].x < DISTANCE_BETWEEN_PIPES:
+                    pipes.append(Pipe())
+
 
             # Collision detection
             for pipe in pipes:
